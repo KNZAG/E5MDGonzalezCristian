@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".RegistroActivity">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="216dp"
+        android:layout_height="79dp"
+        android:background="@color/black"
+        android:text="@string/registro_de_solicitud"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDni"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="334dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:hint="@string/dni"
+        android:textColorHint="@color/design_default_color_background"
+        app:endIconMode="clear_text"
+        app:helperText="@string/requerido"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.519">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txDni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/textInputLayoutNombre"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="334dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:hint="@string/nombre"
+        android:textColorHint="@color/design_default_color_background"
+        app:endIconMode="clear_text"
+        app:helperText="@string/requerido"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutAnno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.929">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/textInputLayoutAnno"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="334dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="240dp"
+        android:hint="@string/anno_titulacion"
+        android:textColorHint="@color/design_default_color_background"
+        app:endIconMode="clear_text"
+        app:helperText="@string/requerido"
+        app:layout_constraintBottom_toTopOf="@+id/codEspe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.621">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txAnno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/codEspe"
+        android:layout_width="275dp"
+        android:layout_height="39dp"
+        android:text="@string/pulse_en_info"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/btRegistrar"
+        app:layout_constraintEnd_toStartOf="@+id/btInfo"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutAnno"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <Button
+        android:id="@+id/btInfo"
+        android:layout_width="73dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#6BE2F7"
+        android:text="@string/info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/codEspe"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.617"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btCancelar"
+        android:layout_width="361dp"
+        android:layout_height="38dp"
+        android:backgroundTint="#F72828"
+        android:text="@string/cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.833"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btRegistrar"
+        android:layout_width="361dp"
+        android:layout_height="38dp"
+        android:backgroundTint="#1AA116 "
+        android:text="@string/registrar"
+        app:layout_constraintBottom_toTopOf="@+id/btCancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codEspe"
+        app:layout_constraintVertical_bias="0.849"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btFinApp"
+        android:layout_width="361dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#F72828"
+        android:text="@string/fin_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codEspe"
+        app:layout_constraintVertical_bias="0.828"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">E5MDGonzalezCristian</string>
+    <string name="requerido">REQUERIDO</string>
+    <string name="imagen_especialidad">IMAGEN ESPECIALIDAD</string>
+    <string name="nombre">NOMBRE</string>
+    <string name="anno_titulacion">AÑO TITULACIÓN</string>
+    <string name="registro_de_solicitud">REGISTRO DE SOLICITUD:</string>
+    <string name="dni">DNI</string>
+    <string name="fin_app">FIN APP</string>
+    <string name="registrar">REGISTRAR</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="info">INFO</string>
+    <string name="codigo_especialidad">CODIGO ESPECIALIDAD</string>
+    <string name="pulse_en_info">INFO PARA SELECCIONAR ESPECIALIDAD</string>
+    <string name="imagen_hospital">Imagen Hospital</string>
+    <string name="hospital">HOSPITAL</string>
+    <string name="cristian">Cristian González</string>
+</resources>
