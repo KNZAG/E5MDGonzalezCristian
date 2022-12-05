@@ -87,7 +87,7 @@ class RegistroActivity : AppCompatActivity() {
         var posRegistro = -1
         var pos = 0
         while (pos < listaRegistros.size && posRegistro == -1) {
-            if (listaRegistros[pos].dni == binding.txDni.text.toString()) {
+            if (listaRegistros[pos].dni == dni) {
                 posRegistro = pos
             }
             pos++
