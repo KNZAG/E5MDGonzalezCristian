@@ -43,6 +43,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txDni"
             android:layout_width="match_parent"
+            android:maxLength="9"
             android:layout_height="wrap_content"
             android:inputType="textUri" />
 
@@ -97,6 +98,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txAnno"
             android:layout_width="match_parent"
+            android:maxLength="4"
             android:layout_height="wrap_content"
             android:inputType="number" />
 
