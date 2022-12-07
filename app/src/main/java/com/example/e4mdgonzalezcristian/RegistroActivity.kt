@@ -1,12 +1,14 @@
 package com.example.e4mdgonzalezcristian
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.example.e4mdgonzalezcristian.databinding.ActivityRegistroBinding
+import com.example.e4mdgonzalezcristian.modelo.Registro
 import kotlin.system.exitProcess
 
 class RegistroActivity : AppCompatActivity() {
@@ -54,9 +56,8 @@ class RegistroActivity : AppCompatActivity() {
             val anoTitulaL = binding.txAnno.text.toString().trim()
             val codEspeciaL = binding.codEspe.text.toString().trim()
             val posRegistro = existeRegistro(dni)
-            //val posRegistro = registroExistente(dni)
 
-            if (dni.isEmpty() || nombre.isEmpty() || anoTitulaL.isEmpty() || codEspeciaL.equals("INFO PARA SELECCIONAR ESPECIALIDAD")) {
+            if (dni.isEmpty() || nombre.isEmpty() || anoTitulaL.isEmpty() || codEspeciaL == "INFO PARA SELECCIONAR ESPECIALIDAD") {
                 Toast.makeText(this, "ERROR:RELLENO TODOS LOS DATOS", Toast.LENGTH_SHORT).show()
             } else {
                 if (posRegistro == -1) {
@@ -65,7 +66,11 @@ class RegistroActivity : AppCompatActivity() {
                     Toast.makeText(this, "REGISTRO REALIZADO", Toast.LENGTH_SHORT).show()
                     limpiar()
                 } else {
-                    Toast.makeText(this, "ERROR: DNI YA REGISTRADO "/*+ posRegistro*/, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        "ERROR: DNI YA REGISTRADO "/*+ posRegistro*/,
+                        Toast.LENGTH_SHORT
+                    ).show()
                     binding.txDni.setText("")
                     binding.txDni.requestFocus()
                 }
@@ -73,6 +78,7 @@ class RegistroActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun limpiar() {
         binding.txDni.setText("")
         binding.txNombre.setText("")
@@ -81,17 +87,5 @@ class RegistroActivity : AppCompatActivity() {
         binding.txDni.requestFocus()
     }
 
-   // private fun registroExistente(dni: String) = dni.indexOf(dni)
-
-   private fun existeRegistro(dni: String): Int {
-        var posRegistro = -1
-        var pos = 0
-        while (pos < listaRegistros.size && posRegistro == -1) {
-            if (listaRegistros[pos].dni == dni) {
-                posRegistro = pos
-            }
-            pos++
-        }
-        return posRegistro
-    }
+    private fun existeRegistro(dni: String) = listaRegistros.indexOf(Registro(dni))
 }

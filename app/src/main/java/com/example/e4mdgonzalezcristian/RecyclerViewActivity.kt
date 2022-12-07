@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e4mdgonzalezcristian.databinding.ActivityRecyclerViewBinding
+import com.example.e4mdgonzalezcristian.modelo.Especialidad
 
 
 class RecyclerViewActivity : AppCompatActivity(), Eventos {

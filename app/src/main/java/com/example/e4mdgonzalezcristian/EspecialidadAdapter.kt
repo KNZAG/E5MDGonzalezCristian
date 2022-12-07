@@ -1,11 +1,13 @@
 package com.example.e4mdgonzalezcristian
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e4mdgonzalezcristian.databinding.ItemEspecialidadAltBinding
+import com.example.e4mdgonzalezcristian.modelo.Especialidad
 
 
 class EspecialidadAdapter(private val especialidades: List<Especialidad>, private val listener: Eventos)
@@ -29,6 +31,7 @@ class EspecialidadAdapter(private val especialidades: List<Especialidad>, privat
         return ClaseInterna(view/*ES LA VAL VIEW*/)
     }
 
+    @SuppressLint("SetTextI18n")//TE LO PIDE ANDROID STUDIO PARA SUPRIMIR LOS WARNINGS
     override fun onBindViewHolder(holder: ClaseInterna, position: Int) {
         val especialidad = especialidades.get(position)
         with(holder) {

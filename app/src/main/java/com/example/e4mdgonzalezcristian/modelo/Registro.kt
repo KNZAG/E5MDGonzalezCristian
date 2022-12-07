@@ -1,6 +1,12 @@
-package com.example.e4mdgonzalezcristian
+package com.example.e4mdgonzalezcristian.modelo
 
-data class Registro (val dni: String, val nombre: String, val annoTitu: Int,/*val especialidad: Especialidad*/val codEspe: Int) {
+data class Registro(
+    val dni: String,
+    val nombre: String = "",
+    val annoTitu: Int = 0,
+    val codEspe: Int = 0
+) {
+
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
